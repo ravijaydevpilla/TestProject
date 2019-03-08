@@ -31,12 +31,12 @@ public class BookService {
 	public void addBook(Book book) {
 		List<Book> books = getAllBooks();
 		boolean bookPresent = false;
-		for(Book b:books) {
-			if(b.getName().equalsIgnoreCase(book.getName())) {
+		for (Book b : books) {
+			if (b.getName().equalsIgnoreCase(book.getName())) {
 				bookPresent = true;
-			}					
+			}
 		}
-		if(bookPresent == false) {
+		if (bookPresent == false) {
 			bookRepository.save(book);
 		}
 	}
